@@ -3,8 +3,8 @@ from django.utils import timezone
 
 
 class Yazi(models.Model):
-    yazar = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     yazi = models.TextField()
+    başlık = models.CharField(max_length=50, default='')
     tarih = models.DateTimeField(
         default=timezone.now)
 
